@@ -1,24 +1,5 @@
 import Menubar from '../Compontes/Menubar'
-// import img from '../Images/clg.png';
-
-
-// function Home() {
-//   return (
-//     <div class='home'>  
-//         <div class ='menu' >
-//             <Menubar/>
-//         </div>
-        
-//     </div>
-  
-//   )
-// }
-
-// export default Home
-
-
 import React from "react";
-// import {Outlet, Link } from "react-router-dom";
 import Home  from "../Home/Home";
 
 
