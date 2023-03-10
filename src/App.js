@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Login from './Login/Login';
+import Menubar from './Compontes/Menubar';
+import College from './Home/College';
+import Home from './Home/Home';
+import './Home/College.css'
+import Payment from './payment/Payment';
 
-function App() {
+
+
+// export default function App() {
+//   return (
+//     <div>
+//       <Login/>
+//     </div>
+//   );
+// }
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Router>
+      <Routes>
+          <Route exact  path = '/login' element={<Login />}/> 
+          <Route exact  path = '/' element={<College/>}/> 
+          <Route  exact path = '/Home' element={<Home/>}/> 
+          <Route  exact path = '/Payment' element={<Payment/>}/> 
 
-export default App;
+          {/* <Route  exact path = '/menu' element={<Menubar/>}/>  */}
+
+      </Routes>
+
+    </Router>
+  );
+  }
